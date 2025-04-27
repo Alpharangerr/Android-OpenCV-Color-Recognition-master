@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <org.opencv.android.JavaCameraView
+        android:id="@+id/color_blob_detection_activity_surface_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="25dp"
+        tools:layout_editor_absoluteY="-343dp" />
+
+    <ImageView
+        android:id="@+id/colorLabel"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_gravity="center_horizontal"
+        android:background="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/result_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/color_blob_detection_activity_surface_view"
+        app:layout_constraintVertical_bias="0.888" />
+
+    <TextView
+        android:id="@+id/color_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:background="#80000000"
+        android:text="Color Name"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/rgb_values"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:background="#80000000"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="R: 0 G: 0 B: 0"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/color_name" />
+
+    <TextView
+        android:id="@+id/min_rgb_values"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:background="#80000000"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="Min R: 0 G: 0 B: 0"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rgb_values" />
+
+    <TextView
+        android:id="@+id/max_rgb_values"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:background="#80000000"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="Max R: 0 G: 0 B: 0"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/min_rgb_values" />
+
+
+    <Button
+        android:id="@+id/result_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:layout_marginBottom="36dp"
+        android:background="@android:color/holo_red_dark"
+        android:enabled="false"
+        android:text="Result"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,15 @@
+*.iml
+.gradle
+/local.properties
+/.idea/libraries
+/.idea/modules.xml
+/.idea/workspace.xml
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+
+# Project exclude paths
+/openCVLibrary/build/
+/openCVLibrary/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/
+/openCVLibrary/build/intermediates/javac/debugAndroidTest/compileDebugAndroidTestJavaWithJavac/classes/
